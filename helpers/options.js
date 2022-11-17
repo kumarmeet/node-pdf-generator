@@ -14,5 +14,10 @@ module.exports = {
             default: '<span style="color: #444;">{{page}}</span>/<span>{{pages}}</span>', 
             last: 'Last Page'
         }
-    }
+    },
+//     childProcessOptions: {
+//     env: {
+//       OPENSSL_CONF: "/dev/null",
+//     },
+//   },
 }
