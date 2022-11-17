@@ -59,6 +59,21 @@ const generatePdf = async (req, res, next) => {
             });
 }
 
+const downloadPdf = async (req, res, next) => {
+  const directoryPath = path.join(__dirname, "..", "docs");
+    
+  //passsing directoryPath and callback function
+  fs.readdir(directoryPath, function (err, files) {
+    //handling error
+    if (err) {
+      return console.log("Unable to scan directory: " + err);
+    }
+
+    res.render("home", {
+      path: files,
+    });
+}
+
 
 module.exports = {
     homeview,
